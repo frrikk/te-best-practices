@@ -1,9 +1,11 @@
 import { cn } from "@/utils/cn";
 
-const SideBar = () => {
-  return (
-    <aside className={cn("bg-red-100 row-span-12 col-span-3")}>Sidebar</aside>
-  );
+interface SideBarProps {
+  className?: string;
+}
+
+const SideBar = ({ className }: SideBarProps) => {
+  return <aside className={cn("border-r-2", className)}>Sidebar</aside>;
 };
 
 SideBar.displayname = "SideBar";

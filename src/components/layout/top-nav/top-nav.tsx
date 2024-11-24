@@ -1,9 +1,21 @@
 import { cn } from "@/utils/cn";
+import { navOptions } from "@/app/(routes)/nav-options";
+import { NavLink } from "@/components/ui/nav-link";
 
-const TopNav = () => {
+interface TopNavProps {
+  className?: string;
+}
+
+const TopNav = ({ className }: TopNavProps) => {
   return (
-    <header className={cn("bg-blue-100 col-span-9 row-span-1")}>
-      <nav>Navbar</nav>
+    <header className={cn("border-b-2 flex items-center", className)}>
+      <nav className={cn("flex gap-8")}>
+        {navOptions.map((option) => (
+          <NavLink key={option.name} href={option.href}>
+            {option.name}
+          </NavLink>
+        ))}
+      </nav>
     </header>
   );
 };

@@ -1,8 +1,12 @@
 import { PropsWithChildren } from "react";
 import { cn } from "@/utils/cn";
 
-const Page = ({ children }: PropsWithChildren) => {
-  return <main className={cn("bg-green-100")}>Page{children}</main>;
+interface PageProps extends PropsWithChildren {
+  className?: string;
+}
+
+const Page = ({ children, className }: PageProps) => {
+  return <main className={cn("", className)}>{children}</main>;
 };
 
 Page.displayName = "Page";
