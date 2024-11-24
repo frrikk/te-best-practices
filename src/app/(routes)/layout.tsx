@@ -4,6 +4,7 @@ import "../globals.css";
 import { Theme } from "@radix-ui/themes";
 import { MainLayout } from "@/components/layout/main-layout/main-layout";
 import { cn } from "@/utils/cn";
+import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,11 +14,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={cn("antialiased bg")}>
+      <body className={cn("antialiased")}>
         <Theme>
           <MainLayout>{children}</MainLayout>
         </Theme>

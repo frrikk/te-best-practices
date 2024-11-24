@@ -1,5 +1,7 @@
+import { Page } from "@/components/layout/page/page";
+
 const DataFetchingPage = () => {
-  return <div>Data fetching</div>;
+  return <Page heading="Data fetching" />;
 };
 
 export default DataFetchingPage;

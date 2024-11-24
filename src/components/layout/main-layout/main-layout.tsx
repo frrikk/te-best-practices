@@ -6,13 +6,13 @@ import { PropsWithChildren } from "react";
 
 const MainLayout = ({ children }: PropsWithChildren) => {
   return (
-    <div className={cn("h-dvh flex")}>
-      <div className={cn("h-full w-64")}>
-        <SideBar className={cn("h-full p-4")} />
+    <div className={cn("h-screen flex flex-col overflow-hidden")}>
+      <div className={cn("h-24 w-full")}>
+        <TopNav className={cn("h-24 sticky top-0 z-10")} />
       </div>
-      <div className={cn("flex flex-col flex-1")}>
-        <TopNav className={cn("h-24 p-4")} />
-        <Page className={cn("flex-1 p-4")}>{children}</Page>
+      <div className={cn("flex flex-1 overflow-hidden")}>
+        <SideBar className={cn("h-full w-64 sticky top-0 z-10")} />
+        <section className={cn("flex-1 overflow-y-auto")}>{children}</section>
       </div>
     </div>
   );
