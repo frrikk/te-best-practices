@@ -26,6 +26,10 @@ const routeNavigation: RouteNavOption[] = [
     name: "Data fetching",
     href: "/data-fetching",
   },
+  {
+    name: "API",
+    href: "/dashboard",
+  },
 ];
 
 export { routeNavigation };

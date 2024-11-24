@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
@@ -15,13 +16,10 @@ const SidebarListItem = ({ href, children }: SidebarListItemProps) => {
 
   return (
     <Link
-      className={cn(
-        "px-2 grid items-center grid-cols-12 animate-fadeInOut relative",
-        {
-          "text-sky-900": pathname.includes(href),
-          "text-slate-500": !pathname.includes(href),
-        },
-      )}
+      className={cn("px-2 grid items-center grid-cols-12 relative", {
+        "text-sky-900": pathname.includes(href),
+        "text-slate-500": !pathname.includes(href),
+      })}
       href={href}
     >
       {pathname.includes(href) && <ActivePoint />}
@@ -35,7 +33,7 @@ export { SidebarListItem };
 const ActivePoint = () => (
   <div
     className={cn(
-      "h-full w-0.5 col-span-1 rounded-full z-10 bg-sky-400 transition ease-in-out duration-300",
+      "h-full w-0.5 animate-activeItem col-span-1 rounded-full z-10 bg-sky-400",
     )}
   />
 );

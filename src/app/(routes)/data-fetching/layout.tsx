@@ -5,6 +5,10 @@ import { PageContent } from "@/components/ui/page-content";
 
 const routes: RouteNavOption[] = [
   {
+    name: "/",
+    href: "/data-fetching",
+  },
+  {
     name: "React Query",
     href: "/data-fetching/react-query",
   },

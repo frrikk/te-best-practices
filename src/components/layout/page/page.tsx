@@ -11,7 +11,7 @@ interface PageProps extends PropsWithChildren {
 
 const Page = ({ children, className, heading }: PageProps) => {
   return (
-    <main className={cn("p-6 max-w-[84ch]", className)}>
+    <main className={cn("p-6 max-w-[84ch] animate-fadeInChildren", className)}>
       <Heading heading={heading} />
       {children}
     </main>

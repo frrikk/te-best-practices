@@ -15,7 +15,7 @@ const SubMenu = ({ routes }: SubMenuProps) => {
   return (
     <nav
       className={cn(
-        "flex gap-3 items-center sticky top-0 pt-6 px-6 backdrop-blur-xl",
+        "flex gap-3 animate-fadeIn items-center sticky top-0 pt-6 px-6 backdrop-blur-xl",
       )}
     >
       {routes.map((route) => (
@@ -23,7 +23,7 @@ const SubMenu = ({ routes }: SubMenuProps) => {
           key={route.name}
           href={route.href}
           className={cn("text-sm px-3 py-1 border rounded-full", {
-            "text-sky-900 bg-sky-100 px-3 py-1 border-sky-400 text-sm rounded-full":
+            "text-sky-900 bg-sky-100 px-3 py-1 border-sky-400 text-sm rounded-full transition duration-300 ease-in-out":
               pathname === route.href,
             "text-slate-500": pathname !== route.href,
           })}
