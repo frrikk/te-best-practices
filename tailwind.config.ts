@@ -11,12 +11,22 @@ export default {
     extend: {
       keyframes: {
         fadeIn: {
-          "0%": { opacity: "0" },
+          "0%": { opacity: "0.8" },
           "100%": { opacity: "1" },
+        },
+        fadeInChildren: {
+          "0%": { opacity: "0", transform: "translateX(-5)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        activeItem: {
+          "0%": { opacity: "0", transform: "translateY(-20)" },
+          "100%": { opacity: "1", transform: "translateX(0) translateY(0)" },
         },
       },
       animation: {
-        fadeInOut: "fadeInOut 1s ease-in-out",
+        fadeIn: "fadeIn .6s ease-in-out",
+        fadeInChildren: "fadeInChildren .6s ease",
+        activeItem: "activeItem .2s ease-in-out",
       },
       colors: {
         background: "var(--background)",
