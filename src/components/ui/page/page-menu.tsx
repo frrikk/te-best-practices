@@ -1,21 +1,21 @@
 "use client";
 
-import { RouteNavOption } from "@/app/(routes)/route-navigation";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/utils/cn";
+import { SubRouteNavigation } from "@/app/(routes)/(composition)/sub-routes";
 
-interface SubMenuProps {
-  routes: RouteNavOption[];
+interface PageMenuProps {
+  routes: SubRouteNavigation[];
 }
 
-const SubMenu = ({ routes }: SubMenuProps) => {
+const PageMenu = ({ routes }: PageMenuProps) => {
   const pathname = usePathname();
 
   return (
     <nav
       className={cn(
-        "flex gap-3 animate-fadeIn items-center sticky top-0 pt-6 px-6 backdrop-blur-xl",
+        "flex gap-3 animate-fadeIn items-center sticky top-0 p-6 backdrop-blur-xl",
       )}
     >
       {routes.map((route) => (
@@ -23,7 +23,7 @@ const SubMenu = ({ routes }: SubMenuProps) => {
           key={route.name}
           href={route.href}
           className={cn("text-sm px-3 py-1 border rounded-full", {
-            "text-sky-900 bg-sky-100 px-3 py-1 border-sky-400 text-sm rounded-full transition duration-300 ease-in-out":
+            "text-sky-900 bg-sky-100 px-3 py-1 border-sky-400 text-sm rounded-full transition duration-100 ease-in-out":
               pathname === route.href,
             "text-slate-500": pathname !== route.href,
           })}
@@ -35,4 +35,4 @@ const SubMenu = ({ routes }: SubMenuProps) => {
   );
 };
 
-export { SubMenu };
+export { PageMenu };

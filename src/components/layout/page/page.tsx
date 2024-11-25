@@ -1,11 +1,11 @@
 import { PropsWithChildren } from "react";
 import { cn } from "@/utils/cn";
 import { Heading } from "@/components/ui/heading/heading";
-import { RouteNavOption } from "@/app/(routes)/route-navigation";
+import { SubRouteNavigation } from "@/app/(routes)/(data-management)/sub-routes";
 
 interface PageProps extends PropsWithChildren {
   className?: string;
-  subLinks?: RouteNavOption[];
+  subLinks?: SubRouteNavigation[];
   heading: string;
 }
 
@@ -13,7 +13,7 @@ const Page = ({ children, className, heading }: PageProps) => {
   return (
     <main className={cn("p-6 max-w-[84ch] animate-fadeInChildren", className)}>
       <Heading heading={heading} />
-      {children}
+      <div className={cn("my-3")}>{children}</div>
     </main>
   );
 };

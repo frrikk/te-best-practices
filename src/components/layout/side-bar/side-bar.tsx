@@ -1,5 +1,7 @@
 import { cn } from "@/utils/cn";
-import { routeNavigation } from "@/app/(routes)/route-navigation";
+import { subRoutes as dataManagementSubRoutes } from "@/app/(routes)/(data-management)/sub-routes";
+import { subRoutes as compositionSubRoutes } from "@/app/(routes)/(composition)/sub-routes";
+import { subRoutes as startingOutSubRoutes } from "@/app/(routes)/(starting-out)/sub-routes";
 import { SidebarSection } from "@/components/ui/sidebar/sidebar-section";
 
 interface SideBarProps {
@@ -10,7 +12,19 @@ const SideBar = ({ className }: SideBarProps) => {
   return (
     <aside className={cn("border-r-2 p-6", className)}>
       <nav className={cn("flex flex-col gap-4")}>
-        <SidebarSection data={routeNavigation} sectionHeading="Components" />
+        <SidebarSection
+          data={startingOutSubRoutes}
+          sectionHeading="Starting out"
+        />
+        <SidebarSection
+          data={dataManagementSubRoutes}
+          sectionHeading="Data management"
+        />
+        <SidebarSection data={[]} sectionHeading="Styling" />
+        <SidebarSection
+          data={compositionSubRoutes}
+          sectionHeading="Component composition"
+        />
       </nav>
     </aside>
   );

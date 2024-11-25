@@ -26,7 +26,7 @@ export default {
       animation: {
         fadeIn: "fadeIn .6s ease-in-out",
         fadeInChildren: "fadeInChildren .6s ease",
-        activeItem: "activeItem .2s ease-in-out",
+        activeItem: "activeItem .1s ease-in-out",
       },
       colors: {
         background: "var(--background)",

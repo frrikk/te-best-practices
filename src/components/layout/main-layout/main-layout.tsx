@@ -7,7 +7,7 @@ import { PropsWithChildren } from "react";
 const MainLayout = ({ children }: PropsWithChildren) => {
   return (
     <div className={cn("h-screen flex flex-col overflow-hidden")}>
-      <div className={cn("h-24 w-full")}>
+      <div className={cn("w-full")}>
         <TopNav className={cn("h-24 sticky top-0 z-10")} />
       </div>
       <div className={cn("flex flex-1 overflow-hidden")}>
