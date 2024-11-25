@@ -10,7 +10,7 @@ interface SideBarProps {
 
 const SideBar = ({ className }: SideBarProps) => {
   return (
-    <aside className={cn("border-r-2 p-6", className)}>
+    <aside className={cn("border-r p-6 text-sm", className)}>
       <nav className={cn("flex flex-col gap-4")}>
         <SidebarSection
           data={startingOutSubRoutes}

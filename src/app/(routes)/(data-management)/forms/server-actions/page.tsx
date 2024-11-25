@@ -1,9 +1,10 @@
 import { Page } from "@/components/layout/page/page";
+import { PageContent } from "@/components/ui/page/page-content";
 
 export default function ServerActionsPage() {
   return (
-    <Page className="h-dvh" heading="Server Actions">
-      Server Actions
+    <Page heading="Server Actions">
+      <PageContent>Content</PageContent>
     </Page>
   );
 }

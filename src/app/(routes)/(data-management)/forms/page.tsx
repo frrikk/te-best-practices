@@ -1,13 +1,13 @@
-import { Box } from "@radix-ui/themes";
 import { Page } from "@/components/layout/page/page";
+import { PageContent } from "@/components/ui/page/page-content";
 
 const FormsPage = () => {
   return (
     <Page heading="Forms">
-      <Box>
+      <PageContent>
         Forms Every submission is stored to an Azure database within Tietoevry
         Create Dev tenant.
-      </Box>
+      </PageContent>
     </Page>
   );
 };

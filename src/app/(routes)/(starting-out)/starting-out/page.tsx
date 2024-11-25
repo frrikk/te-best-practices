@@ -1,9 +1,10 @@
 import { Page } from "@/components/layout/page/page";
+import { PageContent } from "@/components/ui/page/page-content";
 
 export default function StartingOutPage() {
   return (
     <Page heading="Project structure">
-      <p>Slow is smooth. Smooth is fast.</p>
+      <PageContent>Slow is smooth. Smooth is fast.</PageContent>
     </Page>
   );
 }
