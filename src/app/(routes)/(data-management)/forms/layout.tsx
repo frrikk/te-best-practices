@@ -1,9 +1,8 @@
 import { PropsWithChildren } from "react";
-import { RouteNavOption } from "@/app/(routes)/route-navigation";
-import { VeritcalSpacer } from "@/components/ui/spacer/verical-spacer";
-import { PageContent } from "@/components/ui/page-content";
+import { PageMenu } from "@/components/ui/page/page-menu";
+import { SubRouteNavigation } from "@/app/(routes)/(data-management)/sub-routes";
 
-const routes: RouteNavOption[] = [
+const routes: SubRouteNavigation[] = [
   {
     name: "/",
     href: "/forms",
@@ -21,7 +20,7 @@ const routes: RouteNavOption[] = [
 export default function FormsLayout({ children }: PropsWithChildren) {
   return (
     <>
-      <PageContent.SubMenu routes={routes} />
+      <PageMenu routes={routes} />
       {children}
     </>
   );

@@ -19,14 +19,15 @@ export default {
           "100%": { opacity: "1", transform: "translateX(0)" },
         },
         activeItem: {
-          "0%": { opacity: "0", transform: "translateY(-20)" },
-          "100%": { opacity: "1", transform: "translateX(0) translateY(0)" },
+          "0%": { opacity: "0", transform: "scale(0.20)" },
+          "50%": { opacity: "1", transform: "scale(1.05)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
         },
       },
       animation: {
         fadeIn: "fadeIn .6s ease-in-out",
         fadeInChildren: "fadeInChildren .6s ease",
-        activeItem: "activeItem .2s ease-in-out",
+        activeItem: "activeItem .3s ease-in-out",
       },
       colors: {
         background: "var(--background)",

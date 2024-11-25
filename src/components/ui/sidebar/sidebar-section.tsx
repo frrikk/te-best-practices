@@ -1,9 +1,8 @@
 import { Sidebar } from "@/components/ui/sidebar/index";
-import { RouteNavOption } from "@/app/(routes)/route-navigation";
-import { cn } from "@/utils/cn";
+import { SubRouteNavigation } from "@/app/(routes)/(data-management)/sub-routes";
 
 interface SidebarSectionProps {
-  data: RouteNavOption[];
+  data: SubRouteNavigation[];
   sectionHeading: string;
 }
 

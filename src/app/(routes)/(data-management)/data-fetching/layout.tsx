@@ -1,9 +1,9 @@
 import { PropsWithChildren } from "react";
-import { RouteNavOption } from "@/app/(routes)/route-navigation";
+import { SubRouteNavigation } from "@/app/(routes)/(data-management)/sub-routes";
 import { VeritcalSpacer } from "@/components/ui/spacer/verical-spacer";
-import { PageContent } from "@/components/ui/page-content";
+import { PageMenu } from "@/components/ui/page/page-menu";
 
-const routes: RouteNavOption[] = [
+const routes: SubRouteNavigation[] = [
   {
     name: "/",
     href: "/data-fetching",
@@ -21,7 +21,7 @@ const routes: RouteNavOption[] = [
 export default function DataFetchingLayout({ children }: PropsWithChildren) {
   return (
     <>
-      <PageContent.SubMenu routes={routes} />
+      <PageMenu routes={routes} />
       <VeritcalSpacer space="sm" />
       {children}
     </>
