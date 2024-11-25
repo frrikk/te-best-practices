@@ -1,7 +1,7 @@
 import { cn } from "@/utils/cn";
 import Image from "next/image";
 import Link from "next/link";
-import { Contributers } from "@/components/ui/contributers/contributers";
+import { Contributors } from "@/components/ui/contributers/contributors";
 
 interface TopNavProps {
   className?: string;
@@ -23,7 +23,7 @@ const TopNav = ({ className }: TopNavProps) => {
           </span>
         </div>
         <div className={cn("flex items-center gap-2")}>
-          <Contributers />
+          <Contributors />
           <Link
             href="https://github.com/frrikk/te-best-practices"
             className={cn("p-2 rounded-lg border hover:bg-neutral-100 flex")}
