@@ -9,7 +9,7 @@ interface TopNavProps {
 
 const TopNav = ({ className }: TopNavProps) => {
   return (
-    <header className={cn("border-b-2 flex items-center p-6", className)}>
+    <header className={cn("border-b flex items-center p-6", className)}>
       <nav className={cn("flex gap-8 justify-between items-center w-full")}>
         <div className={cn("flex items-center gap-2 text-sm")}>
           <Image

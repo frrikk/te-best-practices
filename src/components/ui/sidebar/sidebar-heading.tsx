@@ -1,11 +1,15 @@
 import { cn } from "@/utils/cn";
 
 interface SidebarHeadingProps {
-  headingText: string;
+  children: string;
 }
 
-const SidebarHeading = ({ headingText }: SidebarHeadingProps) => {
-  return <h2 className={cn("font-bold mb-2")}>{headingText}</h2>;
+const SidebarHeading = ({ children }: SidebarHeadingProps) => {
+  return <h2 className={cn("font-bold")}>{children}</h2>;
 };
 
-export { SidebarHeading };
+const SidebarMainHeading = ({ children }: SidebarHeadingProps) => {
+  return <h1 className={cn("text-lg font-semibold")}>{children}</h1>;
+};
+
+export { SidebarHeading, SidebarMainHeading };
