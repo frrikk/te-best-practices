@@ -9,7 +9,7 @@ interface SidebarSectionProps {
 const SidebarSection = ({ data, sectionHeading }: SidebarSectionProps) => {
   return (
     <section>
-      <Sidebar.Heading headingText={sectionHeading} />
+      <Sidebar.SectionHeading>{sectionHeading}</Sidebar.SectionHeading>
       <Sidebar.List>
         {data.map((item) => (
           <Sidebar.ListItem key={item.name} href={item.href}>
