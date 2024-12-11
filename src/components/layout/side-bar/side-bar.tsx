@@ -3,7 +3,6 @@ import { subRoutes as dataManagementSubRoutes } from "@/app/(routes)/(data-manag
 import { subRoutes as compositionSubRoutes } from "@/app/(routes)/(composition)/sub-routes";
 import { subRoutes as startingOutSubRoutes } from "@/app/(routes)/(starting-out)/sub-routes";
 import { SidebarSection } from "@/components/ui/sidebar/sidebar-section";
-import { Sidebar } from "@/components/ui/sidebar";
 
 interface SideBarProps {
   className?: string;
@@ -17,7 +16,10 @@ const SideBar = ({ className }: SideBarProps) => {
         className,
       )}
     >
-      <Sidebar.MainHeading>The Road to Production</Sidebar.MainHeading>
+      {/*<Link href="/dashboard" className={cn("relative w-fit")}>*/}
+      {/*  <span className={cn("absolute top-0 -right-2")}>💫️</span>*/}
+      {/*  <Sidebar.MainHeading>The Road to Production</Sidebar.MainHeading>*/}
+      {/*</Link>*/}
       <nav className={cn("flex flex-col gap-4")}>
         <SidebarSection
           data={startingOutSubRoutes}
