@@ -11,17 +11,19 @@ const TopNav = ({ className }: TopNavProps) => {
   return (
     <header className={cn("border-b flex items-center p-6", className)}>
       <nav className={cn("flex gap-8 justify-between items-center w-full")}>
-        <div className={cn("flex items-center gap-2 text-sm")}>
-          <Image
-            height={30}
-            width={30}
-            src="/te-logo.svg"
-            alt="Tietoevry logo"
-          />
-          <span className={cn("text-purple-950")}>
-            <strong>React Best Practices</strong>
-          </span>
-        </div>
+        <Link href="/dashboard">
+          <div className={cn("flex items-center gap-2 text-sm")}>
+            <Image
+              height={30}
+              width={30}
+              src="/te-logo.svg"
+              alt="Tietoevry logo"
+            />
+            <span className={cn("text-purple-950")}>
+              <strong>Frontend Hub</strong>
+            </span>
+          </div>
+        </Link>
         <div className={cn("flex items-center gap-2")}>
           <Contributors />
           <Link
