@@ -1,7 +1,7 @@
 import { Page } from "@/components/layout/page/page";
 import About from "./markdown/about.mdx";
 import MdxLayout from "@/components/markdown/mdx-layout";
-import { Author } from "@/app/(routes)/_components/author/author";
+import { Author } from "@/components/ui/author/author";
 
 const getContributers = async () => {
   const res = await fetch(
